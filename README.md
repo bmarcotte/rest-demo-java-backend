@@ -1,2 +1,64 @@
-# rest-demo-java-backend
-A simple demonstration of a RESTful web service in Java
+# REST demo: Java backend
+A simple demonstration of a RESTful web service in Java.
+
+This repository implements a REST web service for managing a simple database of bookmarks.  Each bookmark consists of
+a name (the link text) and the URL that it should link to.  Using this API, you can perform all of the standard "CRUD"
+operations (Create, Read, Update, Delete) on these bookmarks.
+
+This repository is part of my REST API demonstration project.  For more information on this project, including a list
+of all available frontends and backends, please visit the following repo:
+* [rest-demo](https://github.com/bmarcotte/rest-demo/)
+
+## Installation and Deployment
+
+There are configuration files in this repository to support installing and deploying this code through two different
+methods.  Following the instructions for any one of these methods should setup a local running instance of this API
+application.
+
+### Method 1: Using Docker (preferred)
+
+Requirements:
+* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version 1.7.10 or later recommended
+* [Docker](https://www.docker.com/get-docker) - version 17.05 or later
+
+This method will build a Docker image for this application, and then create and run a container instance based on it.
+
+Run the following commands to use this method:
+```
+> docker build -t bookmarkapi:deploy https://github.com/bmarcotte/rest-demo-java-backend.git
+> docker run --name bookmarkapi -p 8080:8080 -d bookmarkapi:deploy
+```
+
+### Method 2: Using JDK, Maven, Tomcat
+
+Requirements:
+* [git](https://github.com/bmarcotte/rest-demo-java-backend.git) - version 1.7.10 or later recommended
+* [Java JDK](http://openjdk.java.net/install/) - version 8u151 or later (either OpenJDK or Oracle JDK)
+  * The `JAVA_HOME` environment variable will need to be set to the root of where your Java JDK is installed, and not to the "jre/" subdir that's inside of it.
+* [Maven](https://maven.apache.org/install.html) - version 2.0.0 or later
+* [Tomcat](https://tomcat.apache.org/download-80.cgi) - version 8.5.27 or later
+  * The [`CATALINA_HOME`](https://tomcat.apache.org/tomcat-8.5-doc/introduction.html#Directories_and_Files) environment variable should be set to the path where your Tomcat instance is installed, e.g. /usr/local/tomcat, /opt/tomcat, etc.
+
+If Docker is not available, you can try manually building and installing the application via this method.
+
+Run the following commands to use this method:
+```
+git clone https://github.com/bmarcotte/rest-demo-java-backend.git
+cd rest-demo-java-backend
+mvn clean install
+cp target/ROOT.war ${CATALINA_HOME}/webapps/
+```
+
+## Testing
+
+For details on how to test this backend web service, please see the following documentation in my
+[rest-demo](https://github.com/bmarcotte/rest-demo) project repository:
+* [TESTING.md](https://github.com/bmarcotte/rest-demo/TESTING.md)
+
+## Author
+
+* **Ben Marcotte** - [bmarcotte](https://github.com/bmarcotte)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
