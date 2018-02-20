@@ -53,7 +53,7 @@ cp target/ROOT.war ${CATALINA_HOME}/webapps/
 
 For details on how to test this backend web service, please see the following documentation in my
 [rest-demo](https://github.com/bmarcotte/rest-demo) project repository:
-* [TESTING.md](https://github.com/bmarcotte/rest-demo/TESTING.md)
+* [TESTING.md](https://github.com/bmarcotte/rest-demo/blob/master/TESTING.md)
 
 ## Author
 
@@ -61,4 +61,4 @@ For details on how to test this backend web service, please see the following do
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
