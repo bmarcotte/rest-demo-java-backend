@@ -32,7 +32,7 @@ Run the following commands to use this method:
 ### Method 2: Using JDK, Maven, Tomcat
 
 Requirements:
-* [git](https://github.com/bmarcotte/rest-demo-java-backend.git) - version 1.7.10 or later recommended
+* [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version 1.7.10 or later recommended
 * [Java JDK](http://openjdk.java.net/install/) - version 8u151 or later (either OpenJDK or Oracle JDK)
   * The `JAVA_HOME` environment variable will need to be set to the root of where your Java JDK is installed, and not to the "jre/" subdir that's inside of it.
 * [Maven](https://maven.apache.org/install.html) - version 2.0.0 or later
@@ -51,8 +51,17 @@ cp target/ROOT.war ${CATALINA_HOME}/webapps/
 
 ## Testing
 
-For details on how to test this backend web service, please see the following documentation in my
-[rest-demo](https://github.com/bmarcotte/rest-demo) project repository:
+Requirements:
+* [Maven](https://maven.apache.org/install.html) - version 2.0.0 or later
+
+This repository includes a simple JUnit test suite that can be invoked with the following command:
+
+```
+mvn test
+```
+
+For details on how to do more extensive functional endpoint testing of this backend web service, please see the
+following documentation in my [rest-demo](https://github.com/bmarcotte/rest-demo) project repository:
 * [TESTING.md](https://github.com/bmarcotte/rest-demo/blob/master/TESTING.md)
 
 ## Author
