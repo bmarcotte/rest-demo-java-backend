@@ -15,7 +15,20 @@ There are configuration files in this repository to support installing and deplo
 methods.  Following the instructions for any one of these methods should setup a local running instance of this API
 application.
 
-### Method 1: Using Docker (preferred)
+### Method 1: Using Docker & docker-compose (preferred)
+
+The easiest way to try out the code in this repository is via the docker-compose method described in the README for the
+main rest-demo project:
+* [README.md: Method 1: Using Docker & docker-compose (preferred)](https://github.com/bmarcotte/rest-demo/blob/master/README.md#method-1-using-docker--docker-compose-preferred)
+
+To request this backend specifically, make sure your docker-compose command is prefixed with `BACKEND=java`, like so:
+```
+> BACKEND=java docker-compose up -d --build
+```
+
+For more details, please see the "Method 1" section in the README link above.
+
+### Method 2: Using Docker without docker-compose
 
 Requirements:
 * [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version 1.7.10 or later recommended
@@ -29,7 +42,7 @@ Run the following commands to use this method:
 > docker run --name bookmarkapi -p 8080:8080 -d bookmarkapi:deploy
 ```
 
-### Method 2: Using JDK, Maven, Tomcat
+### Method 3: Using JDK, Maven, Tomcat
 
 Requirements:
 * [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - version 1.7.10 or later recommended
