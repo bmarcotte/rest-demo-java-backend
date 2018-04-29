@@ -39,14 +39,14 @@ public class BookmarkEndpoint {
   }
 
   @GET
-	@Path( "{id : \\d+}" )
-	public Response get_path(
+  @Path( "{id : \\d+}" )
+  public Response get_path(
     @PathParam( "id" ) String id
   ) {
     return Response.ok(
       this.api().get_bookmark( Integer.parseInt( id ) )
     ).build();
-	}
+  }
 
   @POST
   @Consumes( MediaType.APPLICATION_FORM_URLENCODED )
@@ -106,12 +106,12 @@ public class BookmarkEndpoint {
   }
 
   @DELETE
-	@Path( "{id : \\d+}" )
-	public Response delete_path(
+  @Path( "{id : \\d+}" )
+  public Response delete_path(
     @PathParam( "id" ) String id
   ) {
     return Response.ok(
       this.api().delete_bookmark( Integer.parseInt( id ) )
     ).build();
-	}
+  }
 }
